@@ -27,6 +27,8 @@
 //  3. This notice may not be removed or altered from any source distribution.
 //
 
+#ifdef __APPLE__
+
 #include "TPCircularBuffer.h"
 #include <mach/mach.h>
 #include <stdio.h>
@@ -134,3 +136,5 @@ void TPCircularBufferClear(TPCircularBuffer *buffer) {
         TPCircularBufferConsume(buffer, fillCount);
     }
 }
+
+#endif // #ifdef __APPLE__

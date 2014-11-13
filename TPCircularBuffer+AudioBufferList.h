@@ -30,6 +30,8 @@
 #ifndef TPCircularBuffer_AudioBufferList_h
 #define TPCircularBuffer_AudioBufferList_h
 
+#ifdef __APPLE__
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -210,5 +212,7 @@ UInt32 TPCircularBufferGetAvailableSpace(TPCircularBuffer *buffer, const AudioSt
 #ifdef __cplusplus
 }
 #endif
+
+#endif // #ifdef __APPLE__
 
 #endif

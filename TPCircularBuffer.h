@@ -42,6 +42,8 @@
 #ifndef TPCircularBuffer_h
 #define TPCircularBuffer_h
 
+#ifdef __APPLE__
+
 #include <libkern/OSAtomic.h>
 #include <string.h>
 #include <assert.h>
@@ -191,5 +193,7 @@ static __inline__ __attribute__((always_inline)) bool TPCircularBufferProduceByt
 #ifdef __cplusplus
 }
 #endif
+
+#endif // #ifdef __APPLE__
 
 #endif
